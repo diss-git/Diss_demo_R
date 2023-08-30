@@ -1,6 +1,6 @@
 # Shiny App: Population Analysis
 
-This Shiny app allows you to visualize and analyze population data using interactive charts and tables. It provides options to view population trends over time and growth rates for selected geographical areas.
+This Shiny app is a demo app that allows users to visualize and analyze population data using interactive charts and tables. It provides options to view population trends over time and growth rates for selected geographical areas.
 
 ## Getting Started
 
