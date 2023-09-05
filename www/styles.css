@@ -1,0 +1,13 @@
+/* styles.css */
+
+/* Set font family for body */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Set font family for specific elements */
+#skip-link-container,
+.wb-inv.wb-show-onfocus.wb-sl {
+    font-family: Arial, sans-serif;
+    /* Add other specific styling if needed */
+}
