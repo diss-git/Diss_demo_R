@@ -24,7 +24,7 @@ ui <- fluidPage(
         column(width = 6,
                selectInput(inputId = "geo_filter", label = "Geography", choices = unique(cleaned_data$Geography))),
         
-        # Add Chart Type dropdown (Population or Growth Rate)
+        # Radio button (Population or Growth Rate)
         column(width = 6,
                radioButtons(inputId = "chart_type_toggle", label = NULL,
                            choices = c("Population", "Growth rate"),
