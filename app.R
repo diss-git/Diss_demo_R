@@ -26,9 +26,9 @@ ui <- fluidPage(
         
         # Add Chart Type dropdown (Population or Growth Rate)
         column(width = 6,
-               selectInput(inputId = "chart_type_toggle", label = "Value",
+               radioButtons(inputId = "chart_type_toggle", label = NULL,
                            choices = c("Population", "Growth rate"),
-                           selected = "Population", multiple = FALSE))
+                           selected = "Population", inline = TRUE))
     ),
     
     # Skip link for accessibility
