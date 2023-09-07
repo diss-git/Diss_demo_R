@@ -1,8 +1,11 @@
 # Load the required libraries and dependencies
 source("dependencies.R")
 
-# Perform data extraction, transformation, and loading (ETL)
-source("etl.R")
+# Perform data extraction, transformation, and loading (ETL) using dynamic URL
+source("etl.R") # comment this line to use source("cansim_etl.R")
+
+# Perform data extraction, transformation, and loading (ETL) using cansim library
+#source("cansim_etl.R") # Uncomment this line to use source("cansim_etl.R")
 
 # Define UI
 ui <- fluidPage(
