@@ -58,11 +58,15 @@ server <- function(input, output) {
     
     # Render Highchart for Population and Growth Rate
     output$line_chart <- renderHighchart({
+        
+        # For Dynamic title, to add geography to the title
+        selected_geography <- input$geo_filter 
+        
         if (input$chart_type_toggle == "Population") {
             # Render Highchart for Population
             highchart() %>%
                 hc_chart(type = "line") %>%
-                hc_title(text = "<b>Population over time</b>",
+                hc_title(text = paste("<b>Population over time, ", selected_geography,"</b>"),
                          align = "left") %>%
                 hc_xAxis(categories = filtered_data()$"Reference period") %>%
                 hc_yAxis(title = list(text = "population"),
@@ -81,8 +85,8 @@ server <- function(input, output) {
         } else if (input$chart_type_toggle == "Growth rate") {
             # Render Highchart for Growth Rate
             highchart() %>%
-                hc_chart(type = "line") %>%
-                hc_title(text = "<b>Growth rate over time percentage</b>",
+                hc_chart(type = "line") %>% 
+                hc_title(text = paste("<b>Growth rate over time percentage, ", selected_geography,"</b>"),
                          align = "left") %>%
                 hc_xAxis(categories = filtered_data()$"Reference period") %>%
                 hc_yAxis(title = list(text = "percentage"),
